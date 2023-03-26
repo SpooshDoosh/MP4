@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
-    {% bloxk extra_meta %}
+    {% block extra_meta %}
     {% endblock %}
 
     {% block corecss %}
@@ -34,6 +34,15 @@
     <div class="message-container">
     </div>
     {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+
+
 
     {% block corejs %}
         <!-- jQuery and Bootstrap Bundle (includes Popper) -->
