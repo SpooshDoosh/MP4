@@ -19,8 +19,9 @@ body {
     width: 1.5rem;
 }
 
+
 .logo-font {
-    text-transform: uppercase;
+    text-transform: uppercase;;
 }
 
 .main-logo-link {
@@ -33,7 +34,7 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
+.btn-num-5 {
     background: #45364b;
     color: #b5c2b7;
 }
@@ -41,9 +42,9 @@ body {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-num-5:hover,
+.btn-num-5:active,
+.btn-num-5:focus {
     background: #62466b;
     color: #b5c2b7;
 }
@@ -52,8 +53,16 @@ body {
     color: #000 !important;
 }
 
-.border-black {
-    border: 1px solid black !important;
+.bg-num-5 {
+    background-color: #45364b;
+}
+
+.bg-num-1 {
+    background-color: #b5c2b7;
+}
+
+.border-num-5 {
+    border: 1px solid #45364b !important;
 }
 
 /* -------------------------------- Media Queries */
