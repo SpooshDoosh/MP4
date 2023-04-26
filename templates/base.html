@@ -37,13 +37,28 @@
 <body>
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-num-5 pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-white my-0"><strong>White</strong> <em>Feather</em></h2>
                 </a>
             </div>
+
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form action="{% url 'products' %}" method="GET">
+                    <div class="input-group w-100">
+                        <input type="text" name="q" placeholder="Search" class="form-control border-num-5 rounded-0">
+                        <div class="input-group-append">
+                            <button type="submit" class="form-control border border-num-5 rounded-0">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
             
-            <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
