@@ -1,0 +1,166 @@
+[
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "tarot_cards",
+        "friendly_name": "Tarot Cards"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Animal Totem Tarot",
+        "description": "Journey into the realm of the animals and discover the messages that await in spirit.\r\n\r\nAnimal totems are powerful allies and guides for those who seek connection to their abundant energy. Soaring above or swimming below, crawling along the earth or silently stalking in the shadows—all the animals have their own spiritual lessons and insights to help you along your way. In all their grace and wild beauty, animals possess wisdom beyond words. Let them speak to the deepest part of you.",
+        "price": "22.00",
+        "image_url": null,
+        "image": "tarot7.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Arcanum Tarot",
+        "description": "By Renata Lechner\r\n\r\nMystical insights await within the stunning imagery of the Arcanum Tarot. From the creator of the Thelema Tarot this deck features realistic figures set among lush and magical landscapes. Designed to connect the deepest parts of your soul to the highest realms of the divine, the Arcanum Tarot will show what you need to see in order to move forward toward your destiny.",
+        "price": "24.00",
+        "image_url": null,
+        "image": "tarot8.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Beautiful Creatures Tarot",
+        "description": "By Jay R Rivera & Jasmine Becket-Griffith\r\n\r\nIn this revised and updated version of Beautiful Creatures Tarot, visit a mystical and exotic world where all your questions, big or small, complex or simple, are answered with the utmost love, honestly, and clarity. Enjoy 80 beautiful and now gilded Tarot cards (including 2 extra Wild cards and 4 brand-new images) depicting mythical and legendary creatures as they guide you to a place where all problems are left far behind, and faith and positive energy in life are restored. Interspersed new commentary and a new astrological game to play with the cards enhances the attraction to the child-like creatures that are playful, serious, and friendly, and who will aid you in discovering the answers you have been seeking. Connect to diverse messages in the now full-colour companion guide that includes six new spreads. Don’t shy away from these beautiful creatures; come into their world and lose yourself within their authenticity.",
+        "price": "26.00",
+        "image_url": null,
+        "image": "tarot9.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Crowley Thoth Tarot Deck — Premier Edition",
+        "description": "By Aleister Crowley & Lady Frieda Harris\r\n\r\nThe classic Crowley Thoth Small Tarot deck is presented in Premier Edition format for greater display impact and less pilferage. The 78 cards were painted by Lady Frieda Harris according to instructions from the occult scholar, Aleister Crowley. The magnificent art deco work contains kabbalistic and astrological attributions described in Aleister Crowley’s The Book of Thoth. Includes 48-page booklet and 18″ x 20″ full-colour spread sheet.",
+        "price": "26.00",
+        "image_url": null,
+        "image": "tarot4.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Dreamkeepers Tarot",
+        "description": "By Liz Huston\r\n\r\nThe intriguing imagery of Dreamkeepers Tarot represents years of Liz Huston’s journey of personal growth and healing. Huston presents tarot as a mirror that reflects our deep inner truths and reveals our hidden motivations, beliefs and expectations. Her art creates an alchemical blend of multiple paint media with digital photographic montage, offering signs and symbols to help the reader interpret tarot and all its wisdom. Includes 78-card deck and 180-page illustrated guidebook.",
+        "price": "26.50",
+        "image_url": null,
+        "image": "tarot5.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Easy Tarot",
+        "description": "This kit included a book written by Josephine Ellershaw and the Gilded Tarot by Ciro Marchetti\r\n \r\n\r\nThe Easy Tarot lives up to its name.  Created for beginners, it has everything you need to begin your journey today.  The book includes tips, shortcuts and techniques from her thirty years plus experience of card reading.  The gorgeous Gilded Tarot is no longer in print as a standalone deck, and was replaced by the Gilded Royale Tarot.   The images are Rider-Waite-Smith based and striking in design.  Check out the walkthrough video below to see the cards for yourself.    We think you’ll agree that the Easy Tarot is the perfect beginner deck.",
+        "price": "17.00",
+        "image_url": null,
+        "image": "tarot10.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Gilded Royale Tarot",
+        "description": "By Ciro Marchetti & Barbara Moore\r\n\r\nOne of Llewellyn’s bestselling tarot decks has been updated with brilliantly refreshed art and an updated guidebook. With borderless cards, richer colors, and stylish design improvements, the deck retains its powerful readability with a more contemporary look to engage its many fans and new users alike. Following the RWS style and abounding with medieval magicians, priestesses, emperors, and knights, the Gilded Tarot Royale will continue to inspire tarot readers for years to come.",
+        "price": "21.00",
+        "image_url": null,
+        "image": "tarot2_bQ3Njhx.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Guardian of the Night Tarot",
+        "description": "By M J Cullinane\r\n\r\nWithout Darkness There Is No Light\r\n\r\nFrom the creator of Crow Tarot, this richly illustrated 78-card tarot deck and guidebook are reminders that there is always light to be found, even on the darkest of nights. Discover a vast menagerie of animal energy to guide you on your journey through the toughest times and discover wisdom and insight in those moments.",
+        "price": "18.50",
+        "image_url": null,
+        "image": "tarot11_X2pVb8J.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Light Seer’s Tarot",
+        "description": "By Chris-Anne\r\n\r\nBy reimagining the traditional tarot archetypes and symbols in a contemporary, boho, and intuitive style, The Light Seer’s Tarot expresses the light and shadow sides of our natures and explores the lessons that can be learned from both.\r\n\r\nThe expressive characters who live within the landscapes of the cards tell stories, ask questions, and provide guidance. This deck is an ideal companion as you seek to uncover the places in your life-and in yourself-that are most in need of illumination.",
+        "price": "19.00",
+        "image_url": null,
+        "image": ""
+    }
+},
+{
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Morgan-Greer Tarot in a Tin",
+        "description": "This uniquely expressive deck features magical imagery presented in deep, saturated colors. The borderless 78-card deck allows the details of tarot scenery and symbolism to be viewed from a close, intimate perspective. Morgan-Greer Tarot draws the reader into its evocative artwork. When laid out in a spread, the borderless cards create a beautiful picture. Cards in this pocket-sized deck measure 2˝ x 3.5˝.\r\n\r\nPlease note the cards do not come with a guidebook.",
+        "price": "18.50",
+        "image_url": null,
+        "image": "tarot6_2T6JOy5.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "category": 1,
+        "sku": null,
+        "name": "Poe Tarot",
+        "description": "By Trisha Leigh Shufelt\r\n\r\nThe Poe Tarot follows Poe as the main character, navigating through the Fool’s journey while diving deep into the subconscious realms to unveil what only he can through the wisdom of his works and the teachings of the Tarot.",
+        "price": "20.00",
+        "image_url": null,
+        "image": "tarot1.webp"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "category": null,
+        "sku": null,
+        "name": "Soul Cats Tarot",
+        "description": "By Leeza Robertson & Adam Oehlers\r\n\r\nRediscover your passion for play, your sense of adventure, and your capacity for love with help from the soul cats, a divine group of felines who work in conjunction with angels. This gorgeous deck introduces you to an abundance of spiritual guides and teaches you how to apply their wisdom and strengths to your life.",
+        "price": "30.00",
+        "image_url": null,
+        "image": "tarot12_lrqkKHM.webp"
+    }
+}
+]
