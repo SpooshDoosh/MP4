@@ -4,6 +4,7 @@ html {
 
 body {
     background: url('/media/bg-buddha.jpg') no-repeat center center fixed;
+    background-color: #fff;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Lato';
@@ -34,7 +35,6 @@ body {
 
 .shop-now-button {
     background: #45364b;
-    color: #b5c2b7;
     min-width: 260px;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: #000 !important; 
 }
 
 .bg-num-5 {
@@ -75,12 +75,12 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: #62466b;
+    background: #8c93ab;
     z-index: -1;
 }
 
 hr {
-    border-color: #8c93ab;
+    border-color: #45364b;
 }
 
 .update-link,
