@@ -54,7 +54,7 @@ body {
 }
 
 .text-black {
-    color: #000 !important; 
+    color: #45364b !important; 
 }
 
 .bg-num-5 {
@@ -75,7 +75,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: #8c93ab;
+    background: #fff;
     z-index: -1;
 }
 
