@@ -116,10 +116,14 @@ hr {
 
 .arrow-success, .arrow-danger,
 .arrow-info, .arrow-warning {
-    border-bottom-color: #62466b;
+    border-bottom-color: #62466b !important;
 }
 
-
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
