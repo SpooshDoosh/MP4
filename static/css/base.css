@@ -103,6 +103,23 @@ hr {
     height: 2px;
 }
 
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #000;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+.arrow-success, .arrow-danger,
+.arrow-info, .arrow-warning {
+    border-bottom-color: #62466b;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
