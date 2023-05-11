@@ -230,5 +230,19 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-lg-7 text-right">
+                {% if from_profile %}
+                <a class="btn btn-black rounded-0 my-2" href="{% url 'profile' %}">
+                    <span class="icon mr-2">
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">
+                        Back To Profile
+                    </span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
     </div>
 {% endblock %}
