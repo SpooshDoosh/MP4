@@ -1,0 +1,21 @@
+Hello {{ order.full_name }},
+
+This is an email confirmation of your order from White Feather on {{ order.date }}.
+
+Order Number: {{ order.order_number }}
+
+Order Total: £{{ order.order_total }}
+Delivery Cost: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+Delivering To: {{ order.street_address1 }}, {{ order.town_or_city }}, {{ order.postcode }}.
+
+We have successfully received your order and will begin processing this today. 
+
+Please take note of all the information within this email. If any of the information provided is incorrect, please contact us to rectify this.
+
+Many thanks,
+White Feather
+
+Email: {{ contact_email}}
+Phone: 0123456789
