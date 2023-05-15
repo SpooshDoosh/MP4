@@ -38,19 +38,11 @@ body {
     min-width: 260px;
 }
 
-.btn-num-5 {
-    background: #45364b;
-    color: #b5c2b7;
-}
-
 .shop-now-button:hover,
 .shop-now-button:active,
-.shop-now-button:focus,
-.btn-num-5:hover,
-.btn-num-5:active,
-.btn-num-5:focus {
+.shop-now-button:focus {
     background: #62466b;
-    color: #b5c2b7;
+    color: #fff;
 }
 
 .text-black {
