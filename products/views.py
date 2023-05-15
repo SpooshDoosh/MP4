@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
 from .forms import ProductForm
+from django.contrib.auth.decorators import login.required
 
 # Create your views here.
 
@@ -50,7 +51,12 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login.required
 def add_product(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'Only accessible to admin.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -70,8 +76,12 @@ def add_product(request):
     return render(request, template, context)
 
 
+@login.required
 def edit_product(request, product_id):
     """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only accessible to admin.')
+        return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -94,8 +104,12 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login.required
 def delete_product(request, product_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Only accessible to admin.')
+        return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
