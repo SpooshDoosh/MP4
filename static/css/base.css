@@ -11,13 +11,17 @@ body {
 }
 
 .navbar {
-    background-color: #62466b !important;
+    background-color: #45364b !important;
 }
 
 .navbar-text,
 .navbar-brand,
 .nav-link {
     color: #fff;
+}
+
+.nav-link:hover {
+    color: dimgray !important;
 }
 /* from Bulma */
 .icon {
@@ -34,6 +38,7 @@ body {
 
 .account-button {
     background: none;
+    color: #fff;
 }
 
 .shop-now-button {

@@ -38,149 +38,72 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-
-                        <a class="navbar-brand" href="{% url 'home' %}">
-                            <h2 class="logo-font"><strong>White</strong> <em>Feather</em></h2>
-                        </a>
-    
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-
-                        <div class="collapse navbar-collapse  justify-content-center" id="navbarTogglerDemo02">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'products' %}?category=tarot_cards,crystals_gems,books,accessories">All Products</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'products' %}?category=accessories">Accessories</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'products' %}?category=books">Books</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'products' %}?category=crystals_gems">Crystals & Gems</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'products' %}?category=tarot_cards">Tarot Cards</a>
-                                </li>
-                                <div class="nav-item dropdown">
-                                    <button class="btn account-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Account
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        {% if request.user.is_authenticated %}
-                                            {% if request.user.is_superuser %}
-                                            <li><a class="dropdown-item" href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
-                                            {% endif %}
-                                            <li><a class="dropdown-item" href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
-                                            <li><a class="dropdown-item" href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                                        {% else %}
-                                            <li><a class="dropdown-item" href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
-                                            <li><a class="dropdown-item" href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
-                                        {% endif %}
-                                    </ul>
-                                </div>
-                                <li class="nav-item">
-                                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
-                                        <div>
-                                            <p><i class="fas fa-shopping-bag fa-lg"></i>
-                                                {% if grand_total %}
-                                                £{{ grand_total|floatformat:2 }}
-                                            {% else %}
-                                                £0.00
-                                            {% endif %}
-                                            </p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            
-                        </div>
-
-
-                        <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-                            <input class="form-control me-2" type="text" placeholder="Search" name="q" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-
-
-            </div>
-        </nav>
-        <!--
-        <div id="topnav" class="row bg-num-5 pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-white my-0"><strong>White</strong> <em>Feather</em></h2>
+                <a class="navbar-brand" href="{% url 'home' %}">
+                     <h2 class="logo-font"><strong>White</strong> <em>Feather</em></h2>
                 </a>
-            </div>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form action="{% url 'products' %}" method="GET">
-                    <div class="input-group w-100">
-                        <input type="text" name="q" placeholder="Search" class="form-control border-num-5 rounded-0">
-                        <div class="input-group-append">
-                            <button type="submit" class="form-control border border-num-5 rounded-0">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
+                <div class="collapse navbar-collapse  justify-content-center" id="navbarTogglerDemo02">
+                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}?category=tarot_cards,crystals_gems,books,accessories">All Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}?category=accessories">Accessories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}?category=books">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}?category=crystals_gems">Crystals & Gems</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}?category=tarot_cards">Tarot Cards</a>
+                        </li>
+
+                        <div class="nav-item dropdown">
+                            <button class="btn account-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Account
                             </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class=" btn btn-secondary dropdown-toggle text-white nav-link" type="button" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                            <ul class="dropdown-menu">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                    <li><a class="dropdown-item" href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
+                                    {% endif %}
+                                    <li><a class="dropdown-item" href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                                {% else %}
+                                    <li><a class="dropdown-item" href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
                                 {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
+                            </ul>
                         </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
+
+                         <li class="nav-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
+                                <div>
+                                    <p><i class="fas fa-shopping-bag fa-lg"></i>
                                     {% if grand_total %}
                                         £{{ grand_total|floatformat:2 }}
                                     {% else %}
                                         £0.00
                                     {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
+                        <input class="form-control me-2" type="text" placeholder="Search" name="q" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>  
             </div>
-        </div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-        -->
+        </nav>
     </header>
 
     {% if messages %}
