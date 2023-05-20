@@ -10,9 +10,9 @@ body {
     font-family: 'Lato';
 }
 
-.nav-content {
-    display: flex;
-    justify-content: center;
+:root,
+[data-bs-theme=dark] {
+    --bs-dark: #62466B;
 }
 
 /* from Bulma */

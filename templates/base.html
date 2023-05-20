@@ -63,10 +63,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'products' %}?category=tarot_cards">Tarot Cards</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <p><i class="fas fa-user fa-lg"></i>Account</p>
-                        </a>
+                    <div class="nav-item dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <p><i class="fas fa-user fa-lg"></i> Account</p>
+                        </button>
                         <ul class="dropdown-menu">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
@@ -79,17 +79,16 @@
                                 <li><a class="dropdown-item" href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
                             {% endif %}
                         </ul>
-                    </li>
+                    </div>
                     <li class="nav-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
+                                <p><i class="fas fa-shopping-bag fa-lg"></i>
                                     {% if grand_total %}
-                                        £{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        £0.00
-                                    {% endif %}
+                                    £{{ grand_total|floatformat:2 }}
+                                {% else %}
+                                    £0.00
+                                {% endif %}
                                 </p>
                             </div>
                          </a>
