@@ -62,9 +62,14 @@ body {
     color: #fff;
 }
 
-.account-button:hover,
+.account-button:hover {
+    color: #62466b;
+}
+
+
 .account-button:focus {
     color: #fff;
+    border: none;
 }
 
 .shop-now-button {
