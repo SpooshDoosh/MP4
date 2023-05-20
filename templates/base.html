@@ -36,7 +36,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="{% url 'home' %}">
                 <h2 class="logo-font text-white my-0"><strong>White</strong> <em>Feather</em></h2>
@@ -48,51 +48,43 @@
 
               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=tarot_cards,crystals_gems,books,accessories">All Products</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=accessories">Accessories</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=books">Books</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=crystals_gems">Crystals & Gems</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}?category=tarot_cards">Tarot Cards</a>
-                  </li>
-                </ul>
-
-                <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-                  <input class="form-control me-2" type="text" placeholder="Search" name="q" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-
-                <ul>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <div><i class="fas fa-user fa-lg"></i></div>
-                            <p class="my-0">Account</p>
-                        </a>
-                        <ul class="dropdown-menu">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <li><a class="dropdown-item" href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
-                                {% endif %}
-                                <li><a class="dropdown-item" href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
-                                <li><a class="dropdown-item" href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                            {% else %}
-                                <li><a class="dropdown-item" href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
-                                <li><a class="dropdown-item" href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
-                            {% endif %}
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
-                    <li class="list-inline-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}?category=tarot_cards,crystals_gems,books,accessories">All Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}?category=accessories">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}?category=books">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}?category=crystals_gems">Crystals & Gems</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}?category=tarot_cards">Tarot Cards</a>
+                    </li>
+                    <ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">Account</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                    <li><a class="dropdown-item" href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
+                                    {% endif %}
+                                    <li><a class="dropdown-item" href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                                {% else %}
+                                    <li><a class="dropdown-item" href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                                {% endif %}
+                    </ul>
+                    <li class="nav-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -104,9 +96,16 @@
                                     {% endif %}
                                 </p>
                             </div>
-                        </a>
+                         </a>
                     </li>
                 </ul>
+
+                <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
+                  <input class="form-control me-2" type="text" placeholder="Search" name="q" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+                
               </div>
             </div>
           </nav>
