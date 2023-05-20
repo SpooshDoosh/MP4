@@ -20,9 +20,25 @@ body {
     color: #fff;
 }
 
-.nav-link:hover {
-    color: dimgray !important;
+.navbar-brand:hover {
+    color: #fff;
 }
+
+.nav-link:hover {
+    color: #62466b !important;
+}
+
+.search-button {
+    color: #fff;
+    border-color: #fff;
+}
+
+.search-button:hover {
+    color: #fff;
+    border-color: #62466b;
+    background-color: #62466b;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -34,11 +50,17 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    color: #fff;
 }
 
 .account-button {
     background: none;
     color: #fff;
+}
+
+.account-button:hover,
+.account-button:focus {
+    color: #62466b;
 }
 
 .shop-now-button {
