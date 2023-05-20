@@ -39,6 +39,10 @@ body {
     background-color: #62466b;
 }
 
+.search-box {
+    margin-left: 10px;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -60,7 +64,7 @@ body {
 
 .account-button:hover,
 .account-button:focus {
-    color: #62466b;
+    color: #fff;
 }
 
 .shop-now-button {
@@ -75,7 +79,7 @@ body {
     color: #fff;
 }
 
-.text-black {
+.text-dark {
     color: #45364b !important; 
 }
 
