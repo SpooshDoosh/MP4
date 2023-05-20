@@ -10,13 +10,13 @@ body {
     font-family: 'Lato';
 }
 
-.navbar {
-    background-color: #45364b;
+.nav {
+    background-color: #45364b !important;
     color: #fff;
 }
 
-.navbar p {
-    color: #fff;
+.nav p {
+    color: #fff !important;
 }
 
 /* from Bulma */
