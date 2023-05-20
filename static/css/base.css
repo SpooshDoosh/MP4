@@ -10,9 +10,13 @@ body {
     font-family: 'Lato';
 }
 
-:root,
-[data-bs-theme=dark] {
-    --bs-dark: #62466B;
+.navbar {
+    background-color: #45364b;
+    color: #fff;
+}
+
+.navbar p {
+    color: #fff;
 }
 
 /* from Bulma */
