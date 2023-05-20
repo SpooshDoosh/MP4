@@ -10,6 +10,15 @@ body {
     font-family: 'Lato';
 }
 
+.navbar {
+    background-color: #62466b
+}
+
+.navbar-text,
+.navbar-brand,
+.nav-link {
+    color: #fff;
+}
 /* from Bulma */
 .icon {
     align-items: center;
