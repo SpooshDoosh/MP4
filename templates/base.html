@@ -49,7 +49,7 @@
                         </button>
                     </div>
                     <div class="col-6">
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <div class="collapse navbar-collapse  justify-content-center" id="navbarTogglerDemo02">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
                                     <a class="nav-link" href="{% url 'products' %}?category=tarot_cards,crystals_gems,books,accessories">All Products</a>
@@ -85,7 +85,7 @@
                                 </div>
                                 <li class="nav-item">
                                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="{% url 'view_bag' %}">
-                                        <div class="text-center">
+                                        <div>
                                             <p><i class="fas fa-shopping-bag fa-lg"></i>
                                                 {% if grand_total %}
                                                 £{{ grand_total|floatformat:2 }}
