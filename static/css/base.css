@@ -76,25 +76,32 @@ h3 {
 .qty-button,
 .keep-shopping-button,
 .add-to-bag-button,
-.checkout-button {
-    background-color: #fff;
-    border-color: #45364b;
-    color: #000;
+.checkout-button,
+.back-to-login-button,
+.sign-in-button {
+    background-color: #fff !important;
+    border-color: #45364b !important;
+    color: #000 !important;
+    border-radius: 10px !important;
 }
 
 .keep-shopping-button,
 .add-to-bag-button,
-.checkout-button {
+.checkout-button,
+.back-to-login-button,
+.sign-in-button {
     margin: 15px 10px 15px 0px;
 }
 
 .qty-button:hover,
 .keep-shopping-button:hover,
 .add-to-bag-button:hover,
-.checkout-button:hover {
-    background-color: #45364b;
-    border-color: #45364b;
-    color: #fff;
+.checkout-button:hover,
+.back-to-login-button:hover,
+.sign-in-button:hover {
+    background-color: #45364b !important;
+    border-color: #45364b !important;
+    color: #fff !important;
 }
 
 .search-button {
@@ -138,6 +145,14 @@ h3 {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* -------------------------------- TEXT INPUT */
+
+.textinput {
+    border-radius: 10px !important;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 /* -------------------------------- ??? */
