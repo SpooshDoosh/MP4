@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font text-dark mb-4">Thank you!</h2>
+                <h2 class="logo-font text-dark">Thank you!</h2>
                 <hr>
                 <p class="text-dark">Please note order information below. Shortly you will receive an email confirmation at <strong>{{ order.email }}</strong>.</p>
             </div>
@@ -233,7 +233,7 @@
         <div class="row">
             <div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                <a class="btn btn-black rounded-0 my-2" href="{% url 'profile' %}">
+                <a class="btn keep-shopping-button" href="{% url 'profile' %}">
                     <span class="icon mr-2">
                         <i class="fas fa-angle-left"></i>
                     </span>

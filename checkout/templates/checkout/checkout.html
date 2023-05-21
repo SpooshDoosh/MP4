@@ -22,29 +22,29 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font text-dark mb-4">Checkout</h2>
+                <h2 class="logo-font text-dark">Checkout</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <div class="col-12 col-lg-6 order-lg-last">
                 <p class="text-muted">
                     Order Summary ({{ product_count }})
                 </p>
                 <div class="row">
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">
+                        <p class="small text-muted">
                             Item
                         </p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">
+                        <p class="small text-muted">
                             Subtotal
                         </p>
                     </div>
                 </div>
                 {% for item in bag_items %}
                     <div class="row">
-                        <div class="col-2 mb-1">
+                        <div class="col-2">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
                                     <img src="{{ item.product.image.url }}" alt="{{ product.name }}" class="w-100">
@@ -54,40 +54,40 @@
                             </a>
                         </div>
                         <div class="col-7">
-                            <p class="my-0">
+                            <p>
                                 <strong>{{ item.product.name }}</strong>
                             </p>
-                            <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                            <p class="small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">
+                        <div class="text-right">
+                            <p class="small text-muted">
                                 ${{ item.product.price | calc_subtotal:item.quantity }}
                             </p>
                         </div>
                     </div>
                 {% endfor %}
-                <hr class="my-0">
+                <hr>
                 <div class="row text-dark text-right">
                     <div class="col-7 offset-2">
-                        <p class="my-0">
+                        <p>
                             Order Total:
                         </p>
-                        <p class="my-0">
+                        <p>
                             Delivery:
                         </p>
-                        <p class="my-0">
+                        <p>
                             Grand Total:
                         </p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0">
+                        <p>
                             ${{ total | floatformat:2 }}
                         </p>
-                        <p class="my-0">
+                        <p>
                             ${{ delivery | floatformat:2 }}
                         </p>
-                        <p class="my-0">
+                        <p>
                             ${{ grand_total | floatformat:2 }}
                         </p>
                     </div>
@@ -97,8 +97,8 @@
                 <p class="text-muted">Please fill out the form below.</p>
                 <form action="{% url 'checkout' %}" method="POSt" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-dark px-2 w-auto">Details and Delivery</legend>
+                    <fieldset class="rounded">
+                        <legend class="fieldset-label small text-dark w-auto">Details and Delivery</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                         {{ order_form.phone_number | as_crispy_field }}
@@ -120,18 +120,18 @@
                             {% endif %}
                         </div>
                     </fieldset>
-                    <fieldset class="px-3">
-                        <legend class="fieldset-label small text-dark px-2 w-auto">Payment</legend>
+                    <fieldset>
+                        <legend class="fieldset-label small text-dark w-auto">Payment</legend>
                         <!-- Stripe Card Element -->
-                        <div class="mb-3" id="card-element"></div>
+                        <div id="card-element"></div>
                         <!-- Form Errors -->
-                        <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <div class="text-danger" id="card-errors" role="alert"></div>
                         <!-- Passes client secret to the view to get payment intent id -->
                         <input type="hidden" value="{{ client_secret}}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">
-                        <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
+                    <div class="submit-button text-right">
+                        <a href="{% url 'view_bag' %}" class="btn update-information-button">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
@@ -139,7 +139,7 @@
                                 Adjust Bag
                             </span>
                         </a>
-                        <button id="submit-button" class="btn btn-black rounded-0">
+                        <button id="submit-button" class="btn checkout-button">
                             <span class="font-weight-bold">
                                 Complete Order
                            </span>
@@ -147,14 +147,6 @@
                                 <i class="fas fa-lock"></i>
                            </span>
                         </button>
-                        <p class="small text-danger my-0">
-                            <span class="icon">
-                                <i class="fas fa-exclamation-circle"></i>
-                            </span>
-                            <span>
-                                You will be charged <strong>${{ grand_total|floatformat:2 }}</strong>
-                            </span>
-                        </p>
                     </div>
                 </form>
             </div>
@@ -163,7 +155,7 @@
     <div id="loading-overlay">
         <h1 class="text-light logo-font loading-spinner">
             <span class="icon">
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+                <i class="fas fa-3x fa-spinner fa-pulse"></i>
             </span>
         </h1>
     </div>

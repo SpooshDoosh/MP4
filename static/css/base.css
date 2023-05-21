@@ -10,8 +10,17 @@ body {
     font-family: 'Lato';
 }
 
+/* -------------------------------- SPECIFIC CUSTOM TEXT */
+
 .welcome-msg {
     margin-top: 225px;
+}
+
+.resources-banner,
+.resources-banner p {
+    background-color: #9b54b3;
+    font-size: 18px;
+    margin: 0;
 }
 
 /* -------------------------------- NAVBAR AND FOOTER */
@@ -78,7 +87,8 @@ h3 {
 .add-to-bag-button,
 .checkout-button,
 .back-to-login-button,
-.sign-in-button {
+.sign-in-button,
+.update-information-button {
     background-color: #fff !important;
     border-color: #45364b !important;
     color: #000 !important;
@@ -98,7 +108,8 @@ h3 {
 .add-to-bag-button:hover,
 .checkout-button:hover,
 .back-to-login-button:hover,
-.sign-in-button:hover {
+.sign-in-button:hover,
+.update-information-button:hover {
     background-color: #45364b !important;
     border-color: #45364b !important;
     color: #fff !important;
@@ -153,6 +164,16 @@ h3 {
     border-radius: 10px !important;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+/* -------------------------------- FORUM CSS */
+
+.forums-page {
+    margin-top: 150px;
+}
+
+.forum-page {
+    margin-top: 200px;
 }
 
 /* -------------------------------- ??? */
