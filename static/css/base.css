@@ -10,8 +10,24 @@ body {
     font-family: 'Lato';
 }
 
+.welcome-msg {
+    margin-top: 225px;
+}
+
+/* -------------------------------- NAVBAR AND FOOTER */
+
 .navbar {
     background-color: #45364b !important;
+}
+
+.footer-all {
+    background-color: #45364b;
+}
+
+.footer-all p {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0;
 }
 
 .navbar-text,
@@ -28,19 +44,22 @@ body {
     color: #62466b !important;
 }
 
-.search-button {
-    color: #fff;
-    border-color: #fff;
-}
-
-.search-button:hover {
-    color: #fff;
-    border-color: #62466b;
-    background-color: #62466b;
-}
-
 .search-box {
     margin-left: 10px;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.logo-sub-font {
+    color: #45364b;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #fff;
 }
 
 /* from Bulma */
@@ -52,9 +71,41 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
+/* -------------------------------- BUTTONS */
+
+.qty-button,
+.keep-shopping-button,
+.add-to-bag-button,
+.checkout-button {
+    background-color: #fff;
+    border-color: #45364b;
+    color: #000;
+}
+
+.keep-shopping-button,
+.add-to-bag-button,
+.checkout-button {
+    margin: 15px 10px 15px 0px;
+}
+
+.qty-button:hover,
+.keep-shopping-button:hover,
+.add-to-bag-button:hover,
+.checkout-button:hover {
+    background-color: #45364b;
+    border-color: #45364b;
     color: #fff;
+}
+
+.search-button {
+    color: #fff;
+    border-color: #fff;
+}
+
+.search-button:hover {
+    color: #fff;
+    border-color: #62466b;
+    background-color: #62466b;
 }
 
 .account-button {
@@ -83,6 +134,13 @@ body {
     background: #62466b;
     color: #fff;
 }
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+/* -------------------------------- ??? */
 
 .text-dark {
     color: #45364b !important; 
@@ -114,10 +172,7 @@ hr {
     border-color: #45364b;
 }
 
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
+/* -------------------------------- ??? */
 
 input[name='q']::placeholder {
     color: #aab7c4;
@@ -230,7 +285,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 70px;
     }
 }
 
