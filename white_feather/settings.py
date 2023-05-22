@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'crispy_forms',
+    'crispy_bootstrap4',
     'profiles',
     'storages',
     'blog',
@@ -57,7 +58,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'white_feather.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 TEMPLATES = [
     {
@@ -114,6 +117,7 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+    print("Elephant SQL")
 else:
     DATABASES = {
         'default': {
@@ -152,8 +156,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_L10N = True
-
-USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)

@@ -5,9 +5,32 @@ html {
 body {
     background: url('/media/bg-buddha.jpg') no-repeat center center fixed;
     background-color: #fff;
+    background-attachment: fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Lato';
+}
+
+
+h3 {
+    color: #fff;
+    font-size: 22px;
+}
+
+/* -------------------------------- BLOG PAGES */
+
+.blog-title {
+    color: #45364b;
+}
+
+.browse-blogs {
+    margin-top: 20px;
+}
+
+.white-container {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 /* -------------------------------- SPECIFIC CUSTOM TEXT */
@@ -18,7 +41,7 @@ body {
 
 .resources-banner,
 .resources-banner p {
-    background-color: #9b54b3;
+    background-color: #45364b;
     font-size: 18px;
     margin: 0;
 }
@@ -67,10 +90,6 @@ body {
     text-transform: uppercase;
 }
 
-h3 {
-    color: #fff;
-}
-
 /* from Bulma */
 .icon {
     align-items: center;
@@ -88,7 +107,8 @@ h3 {
 .checkout-button,
 .back-to-login-button,
 .sign-in-button,
-.update-information-button {
+.update-information-button,
+.search-blog-button {
     background-color: #fff !important;
     border-color: #45364b !important;
     color: #000 !important;
@@ -109,7 +129,8 @@ h3 {
 .checkout-button:hover,
 .back-to-login-button:hover,
 .sign-in-button:hover,
-.update-information-button:hover {
+.update-information-button:hover,
+.search-blog-button:hover {
     background-color: #45364b !important;
     border-color: #45364b !important;
     color: #fff !important;
@@ -267,7 +288,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content input {
     border-color: #62466b;
-    border-radius: 0;
+    border-radius: 10px;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -321,7 +342,7 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 70px;
+        padding-top: 85px;
     }
 }
 

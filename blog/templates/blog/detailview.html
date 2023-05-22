@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block extra_css %}
-
 {% endblock %}
 
 {% block page_header %}
@@ -16,28 +15,47 @@
 
 {% block content %}
 
-<h3>Title:</h3>
-<p>{{data.blog_title}}</p>
-<br>
-<h3>Blog</h3>
-<p>{{data.blog}}</p>
-<hr/>
- 
-<a href = "{% url 'blogs' %}">Go Back</a>
- 
- 
-<form method="post">
-    {%csrf_token %}
-    <H2> Comment Here</H2>
-    {{form.as_p}}
-    <input type ="submit" value="Comment">
-</form>
- 
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>Title:</h3>
+            <p class="text-white">{{data.blog_title}}</p>
+            <br>
+            <h3>Blog</h3>
+            <p class="text-white">{{data.blog|safe}}</p>
+            <br>
+            <a class="text-info" href = "{% url 'blogs' %}">Go Back</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <form method="post">
+            {%csrf_token %}
+            <H2> Comment Here</H2>
+            {{form.as_p}}
+            <input type ="submit" value="Comment">
+        </form>
+    </div>
+
+    <hr>
+
     {%for comment in comments%}
-    <p>
-        <strong>{{comment.your_name}}:</strong> 
-        {{comment.comment_text}}
-    </p>
+    <div class="row">
+        <div class="col white-container">
+            <p class="text-dark">
+                <strong>{{comment.your_name}}:</strong> 
+                {{comment.comment_body}}
+            </p>
+        </div>
+    </div>
     {%endfor %}
+
+</div>
+ 
+
+ 
+ 
 
 {% endblock %}

@@ -10,7 +10,8 @@ class OrderForm(forms.ModelForm):
                   'town_or_city', 'postcode', 'country',
                   'county',)
 
-    def __innit__(self, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',

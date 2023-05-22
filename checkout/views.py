@@ -16,7 +16,7 @@ import json
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
-        stripe.apit_key = settings.STRIPE_SECRET_KEY
+        stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
             'save_info': request.POST.get('save_info'),
@@ -75,13 +75,13 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One  of the products in the bag was not found."
+                        "One of the products in the bag was not found."
                         "Please contact us for assistance."
                     ))
                     order.delete()
                     return redirect(reverse('view_bag'))
 
-            request.session['save_info'] = 'save_info' in request.POST
+            request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'It appears that there is an error within the form. \
@@ -125,9 +125,9 @@ def checkout(request):
 
     template = 'checkout/checkout.html'
     context = {
-            'order_form': order_form,
-            'stripe_public_key': stripe_public_key,
-            'client_secret': intent.client_secret,
+        'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
