@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'profiles',
     'storages',
-    'musicplayer',
 ]
 
 MIDDLEWARE = [
