@@ -33,7 +33,7 @@
         <div class="col-12 col-lg-4">
             <form method="post">
                 {%csrf_token %}
-                <h2 class="logo-font"> Comment Here</h2>
+                <h2 class="logo-font">Leave A Comment</h2>
                 {{ form|crispy }}
                 <input class="btn update-information-button" type ="submit" value="Comment">
             </form>
@@ -43,9 +43,11 @@
 
     <hr>
 
-    {%for comment in comments%}
+    
     <div class="row">
         <div class="col comment-box white-container">
+            <h2 class="logo-font">Comments</h2>
+            {%for comment in comments%}
             <p class="text-white">
                 <strong>{{comment.your_name}}:</strong> 
                 {{comment.comment_body}}
