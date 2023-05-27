@@ -42,12 +42,15 @@
     </div>
 
     <hr>
-
+    <div class="row">
+        <div class="col-12">
+            <h2 class="logo-font">Comments</h2>
+        </div>
+    </div>
     
+    {%for comment in comments%}
     <div class="row">
         <div class="col comment-box white-container">
-            <h2 class="logo-font">Comments</h2>
-            {%for comment in comments%}
             <p class="text-white">
                 <strong>{{comment.your_name}}:</strong> 
                 {{comment.comment_body}}
