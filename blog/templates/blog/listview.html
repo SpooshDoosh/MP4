@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col white-container">
                 <h3 class="blog-title text-white">{{data.blog_title}}</h3>
-                <a class="text-white" href = "{% url 'blog' _id=data.id %}">Read Blog</a>
+                <a class="btn update-information-button" href = "{% url 'blog' _id=data.id %}">Read Blog</a>
             </div>
         </div>
     {% endfor %}
