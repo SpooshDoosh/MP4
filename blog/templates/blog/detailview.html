@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block extra_css %}
 {% endblock %}
@@ -17,33 +18,37 @@
 
 <div class="container">
     <div class="row">
-        <div class="col">
-            <h3>Title:</h3>
-            <p class="text-white">{{data.blog_title}}</p>
+        <div class="col white-container">
+            <h2 class="text-dark">{{data.blog_title}}</h2>
             <br>
-            <h3>Blog</h3>
-            <p class="text-white">{{data.blog|safe}}</p>
+            <p class="text-dark">{{data.blog|safe}}</p>
             <br>
-            <a class="text-info" href = "{% url 'blogs' %}">Go Back</a>
+            <a class="btn update-information-button" href = "{% url 'blogs' %}">Go Back</a>
         </div>
     </div>
 
     <hr>
 
     <div class="row">
-        <form method="post">
-            {%csrf_token %}
-            <H2> Comment Here</H2>
-            {{form.as_p}}
-            <input type ="submit" value="Comment">
-        </form>
+        <div class="col-lg-3"></div>
+
+        <div class="col-12 col-lg-6">
+            <form method="post">
+                {%csrf_token %}
+                <h2 class="logo-font"> Comment Here</h2>
+                {{ form|crispy }}
+                <input class="btn update-information-button" type ="submit" value="Comment">
+            </form>
+        </div>
+
+        <div class="col-lg-3"></div>
     </div>
 
     <hr>
 
     {%for comment in comments%}
     <div class="row">
-        <div class="col white-container">
+        <div class="col comment-box white-container">
             <p class="text-dark">
                 <strong>{{comment.your_name}}:</strong> 
                 {{comment.comment_body}}

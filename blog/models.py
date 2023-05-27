@@ -13,8 +13,8 @@ class BlogMod(models.Model):
 
 
 class CommentMod(models.Model):
-    your_name = models.CharField(max_length=30)
-    comment_body = models.TextField()
+    your_name = models.CharField(max_length=30, null=False, blank=False)
+    comment_body = models.TextField(max_length=256, null=False, blank=False)
     blog = models.ForeignKey('BlogMod', on_delete=models.CASCADE)
 
     def __str__(self):
