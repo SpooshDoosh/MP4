@@ -29,8 +29,8 @@
     {% for data in dataset %}
         <div class="row">
             <div class="col white-container">
-                <h3 class="blog-title">{{data.blog_title}}</h3>
-                <a href = "{% url 'blog' _id=data.id %}">Read Blog</a>
+                <h3 class="blog-title text-white">{{data.blog_title}}</h3>
+                <a class="text-white" href = "{% url 'blog' _id=data.id %}">Read Blog</a>
             </div>
         </div>
     {% endfor %}

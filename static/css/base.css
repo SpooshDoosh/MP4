@@ -33,6 +33,7 @@ h3 {
     background: transparent !important;
     border-radius: 10px;
     margin-bottom: 10px;
+    border: 2px solid white;
 }
 
 /* -------------------------------- SPECIFIC CUSTOM TEXT */
@@ -123,7 +124,8 @@ footer {
     border-color: #45364b !important;
     color: #000 !important;
     border-radius: 10px !important;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .keep-shopping-button,

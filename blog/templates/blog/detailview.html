@@ -19,9 +19,9 @@
 <div class="container">
     <div class="row">
         <div class="col white-container">
-            <h2 class="text-dark">{{data.blog_title}}</h2>
+            <h2 class="text-white">{{data.blog_title}}</h2>
             <br>
-            <p class="text-dark">{{data.blog|safe}}</p>
+            <p class="text-white">{{data.blog|safe}}</p>
             <br>
             <a class="btn update-information-button" href = "{% url 'blogs' %}">Go Back</a>
         </div>
@@ -46,7 +46,7 @@
     {%for comment in comments%}
     <div class="row">
         <div class="col comment-box white-container">
-            <p class="text-dark">
+            <p class="text-white">
                 <strong>{{comment.your_name}}:</strong> 
                 {{comment.comment_body}}
             </p>
