@@ -8,7 +8,7 @@ class UserProfileForm(forms.ModelForm):
         exclude = ('user',)
 
     def __init__(self, *args, **kwargs):
-        super().__init__(self, *args, **kwargs)
+        super().__init__(*args, **kwargs)
         placeholders = {
             'default_phone_number': 'Contact Number',
             'default_street_address1': '1st Line of Street Address',
