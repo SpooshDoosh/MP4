@@ -14,7 +14,7 @@ class CommentForm(forms.ModelForm):
             'comment_body': 'Comment',
         }
 
-        self.fields['your_name'].widget.attrs['autofocus'] = True
+        self.fields['your_name'].widget.attrs['autofocus'] = False
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
