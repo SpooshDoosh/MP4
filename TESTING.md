@@ -115,7 +115,7 @@ The website's CSS was run through the W3C CSS Validation Service (Jigsaw). No is
 
 # Lighthouse
 
-Tests on Lighthouse were decent, however there were some performance issues due to images being served could be compressed and served in next-gen formats.
+* Tests on Lighthouse were decent, however there were some performance issues due to images being served could be compressed and served in next-gen formats.
 ---
 
 # Debugging
