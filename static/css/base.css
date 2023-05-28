@@ -19,8 +19,6 @@ h3 {
 
 /* -------------------------------- BLOG PAGES */
 
-
-
 .blog-title {
     color: #45364b;
 }
@@ -50,6 +48,14 @@ h3 {
 }
 
 /* -------------------------------- NAVBAR AND FOOTER */
+
+.navbar-toggler-icon {
+    color: #fff;
+}
+
+.navbar-toggler {
+    border: 1px solid white;
+}
 
 .nav {
     margin-bottom: 10px;

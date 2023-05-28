@@ -28,16 +28,25 @@
         </div>
     
         <hr>
-    
+
         <div class="row">
             <div class="col-12 col-lg-4">
-                <form method="post">
-                    {%csrf_token %}
-                    <h2 class="logo-font">Leave A Comment</h2>
-                    {{ form|crispy }}
-                    <input class="btn update-information-button" type ="submit" value="Comment">
-                </form>
-                <br>
+                <p>
+                    <button class="btn update-information-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                        Leave A Comment
+                    </button>
+                </p>
+                <div>
+                    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                        <div class="card card-body" style="width: 300px;">
+                            <form method="post">
+                                {%csrf_token %}
+                                {{ form|crispy }}
+                                <input class="btn update-information-button" type ="submit" value="Comment">
+                            </form>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
     
