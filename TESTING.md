@@ -70,12 +70,12 @@ I personally tested the website on my Google Pixel 7 Pro.
     * I want to be able to add, delete and edit available products.
         * Once logged in as a superuser, buttons beneath each product will appear (edit and delete). The superuser will also have access to a product management page to add products to the site.
 
-        ![so1]()
+        ![so1](/TESTING/so1.png)
 
     * I want the website to clearly indicate it's purpose
         * On the home page there is a brief explanation of what the site is for.
 
-        ![so2](/TESTING/)
+        ![so2](/TESTING/so2.png)
 
     * I want site visitors to be able to register, login and logout.
         * The site has register, loging and logout functionality. These links can be found on the navbar upon clicking on the account dropdown button.
