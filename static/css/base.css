@@ -50,7 +50,7 @@ h3 {
 /* -------------------------------- NAVBAR AND FOOTER */
 
 .navbar-toggler-icon {
-    color: #fff;
+    background-color: #fff;
 }
 
 .navbar-toggler {
