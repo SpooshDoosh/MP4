@@ -16,50 +16,51 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col white-container">
-            <h2 class="text-white">{{data.blog_title}}</h2>
-            <br>
-            <p class="text-white">{{data.blog|safe}}</p>
-            <br>
-            <a class="btn update-information-button" href = "{% url 'blogs' %}">Go Back</a>
+    <div class="container">
+        <div class="row">
+            <div class="col white-container">
+                <h2 class="text-white">{{data.blog_title}}</h2>
+                <br>
+                <p class="text-white">{{data.blog|safe}}</p>
+                <br>
+                <a class="btn update-information-button" href = "{% url 'blogs' %}">Go Back</a>
+            </div>
         </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-        <div class="col-12 col-lg-4">
-            <form method="post">
-                {%csrf_token %}
-                <h2 class="logo-font">Leave A Comment</h2>
-                {{ form|crispy }}
-                <input class="btn update-information-button" type ="submit" value="Comment">
-            </form>
-            <br>
-        </div>
-    </div>
-
-    <hr>
-    <div class="row">
-        <div class="col-12">
-            <h2 class="logo-font">Comments</h2>
-        </div>
-    </div>
     
-    {%for comment in comments%}
-    <div class="row">
-        <div class="col comment-box white-container">
-            <p class="text-white">
-                <strong>{{comment.your_name}}:</strong> 
-                {{comment.comment_body}}
-            </p>
+        <hr>
+    
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <form method="post">
+                    {%csrf_token %}
+                    <h2 class="logo-font">Leave A Comment</h2>
+                    {{ form|crispy }}
+                    <input class="btn update-information-button" type ="submit" value="Comment">
+                </form>
+                <br>
+            </div>
         </div>
+    
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="logo-font">Comments</h2>
+            </div>
+        </div>
+        
+        {%for comment in comments%}
+        <div class="row">
+            <div class="col comment-box white-container">
+                <p class="text-white">
+                    <strong>{{comment.your_name}}:</strong> 
+                    {{comment.comment_body}}
+                </p>
+            </div>
+        </div>
+        {%endfor %}
+        <br>
+    
     </div>
-    {%endfor %}
-
-</div>
  
 
  

@@ -228,6 +228,16 @@ footer {
     z-index: -1;
 }
 
+.overlay-blog {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #62466b;
+    z-index: -1;
+}
+
 hr {
     border-color: #45364b;
 }
@@ -357,5 +367,12 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .welcome-msg {
+        margin-top: 110px;
     }
 }
