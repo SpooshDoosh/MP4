@@ -17,6 +17,10 @@ h3 {
     font-size: 22px;
 }
 
+.checkout-container {
+    padding-bottom: 50px !important;
+}
+
 /* -------------------------------- BLOG PAGES */
 
 .blog-title {
